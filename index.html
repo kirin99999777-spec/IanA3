@@ -1,0 +1,369 @@
+<!-- created by <Ian Fang> on <2025/11/20> -->
+<!DOCTYPE html>
+<html lang="en-CA">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ian's Assignment 3: Personal B&B Webpage Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+
+    <style>
+      body {
+        font-family: "Times New Roman", Times, serif;
+        margin: 0;
+        padding: 0;
+        background-color: black;
+      }
+
+      .badge {
+        font-family: "Jua", sans-serif;
+        background-color: #AA2B3A;
+        color: white;
+        padding: 5px 15px;
+        font-size: 20px;
+        font-weight: normal;
+        border-radius: 3px;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        border: 3px solid white;
+        z-index: 10;
+      }
+
+      .badge:hover {
+        background-color: #1C2A62;
+        border-color: #F1E6D8;
+      }
+
+      .badge a {
+        color: white;
+        text-decoration: none;
+        display: block;
+      }
+
+      .main-nav a {
+        font-family: "Jua", sans-serif;
+        font-size: 30px;
+        color: white;
+        text-decoration: none;
+        font-weight: normal;
+      }
+
+      .main-nav {
+        position: absolute;
+        top: 196px;
+        right: 40px;
+      }
+
+      .main-nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 95px;
+      }
+
+      .main-nav li {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      a:hover {
+        color: #1C2A62;
+      }
+
+      .address-container a {
+        color: white;
+        text-decoration: underline;
+      }
+
+      .badge:hover a {
+        color: white;
+      }
+
+      .wrapper {
+        width: 1440px;
+        margin: 0 auto;
+        background-color: white;
+        min-height: 2285px;
+      }
+
+      .content {
+        width: 1200px;
+        margin: 0 auto;
+        background-color: #F1E6D8;
+        padding: 0px;
+        min-height: 2285px;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      .top-rectangle {
+        width: 1200px;
+        height: 249px;
+        background-color: #AA2B3A;
+        margin-top: 0px;
+        max-width: 100%;
+        position: relative;
+        overflow: visible;
+        align-items: flex-start;
+        display: flex;
+        bottom: 0;
+      }
+
+      .main-image {
+        width: 1200px;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto;
+        opacity: 0.84;
+      }
+
+      .promote-slogan {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 40px;
+        color: #AA2B3A;
+        margin: 30px 0 30px 55px;
+      }
+
+      .destinations-title {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 40px;
+        color: #AA2B3A;
+        margin: 70px 0 50px 55px;
+      }
+
+      .country-name {
+        margin-top: 2px;
+        margin-bottom: 0;
+        margin-left: -10px;
+      }
+
+      .reserve-button {
+        font-family: 'Archivo Black', sans-serif;
+        background-color: #1C2A62;
+        color: white;
+        padding: 15px 25px;
+        margin: -100px 0px 0px 830px;
+        border: none;
+        border-radius: 20px;
+        font-size: 24px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        text-decoration: none;
+        display: flex;
+      }
+
+      .reserve-button:hover {
+        background-color: #AA2B3A;
+      }
+
+      .room-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 100px;
+        padding: 0 90px;
+      }
+
+      .room-card img {
+        width: 270px;
+        height: 270px;
+        display: block;
+        border-radius: 20px;
+        object-fit: cover;
+      }
+
+      .destinations-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        text-align: center;
+        margin-top: 50px;
+        padding: 0 55px 70px 55px;
+      }
+
+      .destination-card img {
+        width: 190px;
+        height: 190px;
+        object-fit: cover;
+        display: block;
+        border-radius: 20px;
+        margin: 0 0 20px 30px;
+      }
+
+      .logo {
+        position: relative;
+        top: 28px;
+        left: 32px;
+        width: 242px;
+        height: 200px;
+        max-width: 100%;
+        margin: 0;
+      }
+
+      .bottom-rectangle {
+    width: 1200px;
+    height: 359px;
+    background-color: #141E46;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-top: 35px;
+    box-sizing: border-box;
+      }
+
+      @media (max-width: 1440px) {
+        .wrapper {
+          width: 100%;
+        }
+      }
+
+      footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        color: white;
+        padding: 0;
+        text-align: center;
+        font-weight: bold;
+      }
+
+      footer p {
+        margin: 0;
+        padding: 20px 0;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      .destination-card p {
+        font-family: 'Archivo Black', sans-serif;
+        font-size: 24px;
+        color: #AA2B3A;
+        margin-top: 5px;
+        margin-bottom: 0;
+        font-weight: bold;
+      }
+
+      .location-title {
+        position: static;
+        font-size: 40px;
+        color: white;
+        font-weight: bold;
+        margin: 0 0 45px 0;
+        text-align: center;
+      }
+
+      .address-container {
+        text-align: center;
+        color: white;
+        font-size: 20px;
+      }
+
+      .address-container p {
+        text-align: center;
+        margin: 4px 0;
+        line-height: 1;
+      }
+
+      .separator-line {
+        width: 1060px;
+        height: 2px;
+        background-color: white;
+        margin: 11px auto 20px auto;
+      }
+
+      .destination-card p:first-of-type {
+        margin-left: -10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <div class="top-rectangle">
+          <img class="logo" src="cozynestb&blogo2.png" alt="B&B Logo">
+          <nav class="main-nav">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="booking.html">Room Booking</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">About</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="badge">
+          <a href="#">Login</a>
+        </div>
+        <img class="main-image" src="mainimage.jpg" alt="Main Image">
+        <h2 class="promote-slogan">Escape. Relax. Stay.</h2>
+        <div class="room-grid">
+          <div class="room-card">
+            <img src="roomimage1.jpg" alt="Luxury Room">
+          </div>
+
+          <div class="room-card">
+            <img src="roomimage2.jpg" alt="Cozy Cabin">
+          </div>
+          <div class="room-card">
+            <img src="roomimage3.jpg" alt="Modern Suite">
+          </div>
+        </div>
+
+        <div class="destinations-header">
+          <h3 class="destinations-title">Featured B&B Destinations</h3>
+          <button class="reserve-button">Reserve Your Stay</button>
+          <div class="destinations-grid">
+            <div class="destination-card">
+              <img src="destinationimage1.jpg" alt="London Skyline">
+              <p>London</p>
+              <p class="country-name">UK</p>
+            </div>
+            <div class="destination-card">
+              <img src="destinationimage2.jpg" alt="Beijing Skyline">
+              <p>Beijing</p>
+              <p class="country-name">China</p>
+            </div>
+
+            <div class="destination-card">
+              <img src="destinationimage3.jpg" alt="Moscow Skyline">
+              <p>Moscow</p>
+              <p class="country-name">Russia</p>
+            </div>
+
+            <div class="destination-card">
+              <img src="destinationimage4.jpg" alt="Paris Eiffel Tower">
+              <p>Paris</p>
+              <p class="country-name">France</p>
+            </div>
+          </div>
+
+          <div class="bottom-rectangle">
+            <div class="location-title">Our Location</div>
+            <div class="address-container">
+              <p>Scandinavian Cabin Hospitality Group</p>
+              <p>Suite 302, 88 Norwood Avenue</p>
+              <p>Waterloo, ON N2L 4G2, Canada</p>
+              <br>
+              <p>Customer Service: +1 (289) 555-1472</p>
+              <p>Email: <a href="mailto:y259fang@uwaterloo.ca">y259fang@uwaterloo.ca</a></p>
+              <p>Business Hours: 9:00 AM – 9:00 PM</p>
+            </div>
+
+            <div class="separator-line"></div>
+            <footer>
+              <p>*Cozy Nest B&B* &copy;2025 Ian’s Design Blog. All rights reserved.</p>
+            </footer>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
